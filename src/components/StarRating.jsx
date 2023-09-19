@@ -3,13 +3,14 @@ import Star from "./Star";
 
 const StarRating = ({
   maxRating = 5,
+  defaultRating = 0,
   textColor = "black",
   starColor = "black",
   textSize = "xs",
   starSize = 5,
   messages = [],
 }) => {
-  const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
 
   const onRateHandler = (rate) => {
