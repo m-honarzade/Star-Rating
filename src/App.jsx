@@ -1,5 +1,11 @@
+import StarRating from "./components/StarRating";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <StarRating maxRating={10} />
+    </>
+  );
 }
 
 export default App;
