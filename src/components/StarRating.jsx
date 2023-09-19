@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import Star from "./Star";
 
 const StarRating = ({
@@ -47,6 +48,16 @@ const StarRating = ({
       </p>
     </div>
   );
+};
+StarRating.propTypes = {
+  maxRating: PropTypes.number,
+  defaultRating: PropTypes.number,
+  messages: PropTypes.array,
+  textColor: PropTypes.string,
+  textSize: PropTypes.string,
+  starColor: PropTypes.string,
+  starSize: PropTypes.string,
+  onSetRating: PropTypes.func,
 };
 
 export default StarRating;
