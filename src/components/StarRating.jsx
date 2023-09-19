@@ -9,12 +9,14 @@ const StarRating = ({
   textSize = "xs",
   starSize = 5,
   messages = [],
+  onSetRating,
 }) => {
   const [rating, setRating] = useState(defaultRating);
   const [tempRating, setTempRating] = useState(0);
 
   const onRateHandler = (rate) => {
     setRating(rate);
+    onSetRating(rate);
   };
   const onHoverInHandler = (rate) => {
     setTempRating(rate);

@@ -1,3 +1,4 @@
+import ShowRating from "./components/ShowRating";
 import StarRating from "./components/StarRating";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
         messages={["terrible", "bad", "ok", "good", "super"]}
         defaultRating={2}
       />
+      <ShowRating />
     </>
   );
 }
