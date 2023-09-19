@@ -1,6 +1,12 @@
-const Star = ({ onRate, full }) => {
+const Star = ({ onRate, full, hoverIn, hoverOut }) => {
   return (
-    <span role="button" className=" cursor-pointer block " onClick={onRate}>
+    <span
+      role="button"
+      className=" cursor-pointer block "
+      onClick={onRate}
+      onMouseEnter={hoverIn}
+      onMouseLeave={hoverOut}
+    >
       {full ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
