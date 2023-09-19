@@ -22,7 +22,7 @@ const StarRating = ({ maxRating = 5 }) => {
           <Star
             key={i}
             onRate={() => onRateHandler(i + 1)}
-            full={rating >= i + 1}
+            full={tempRating ? tempRating >= i + 1 : rating >= i + 1}
             hoverIn={() => onHoverInHandler(i + 1)}
             hoverOut={onHoverOutHandler}
           />
