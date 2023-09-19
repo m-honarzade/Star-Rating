@@ -1,7 +1,14 @@
 import { useState } from "react";
 import Star from "./Star";
 
-const StarRating = ({ maxRating = 5 }) => {
+const StarRating = ({
+  maxRating = 5,
+  textColor = "black",
+  starColor = "black",
+  textSize = "xs",
+  starSize = 5,
+  messages = [],
+}) => {
   const [rating, setRating] = useState(0);
   const [tempRating, setTempRating] = useState(0);
 
@@ -25,10 +32,16 @@ const StarRating = ({ maxRating = 5 }) => {
             full={tempRating ? tempRating >= i + 1 : rating >= i + 1}
             hoverIn={() => onHoverInHandler(i + 1)}
             hoverOut={onHoverOutHandler}
+            color={starColor}
+            size={starSize}
           />
         ))}
       </div>
-      <p className={`text-white text-base`}>{tempRating || rating || ""}</p>
+      <p className={`text-${textColor} text-${textSize}`}>
+        {messages.length === maxRating
+          ? messages[tempRating ? tempRating - 1 : rating - 1]
+          : tempRating || rating || ""}
+      </p>
     </div>
   );
 };
