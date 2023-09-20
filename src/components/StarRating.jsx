@@ -8,7 +8,7 @@ const StarRating = ({
   textColor = "black",
   starColor = "black",
   textSize = "xs",
-  starSize = 5,
+  starSize = 25,
   messages = [],
   onSetRating,
 }) => {
