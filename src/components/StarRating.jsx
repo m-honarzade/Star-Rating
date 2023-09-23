@@ -12,6 +12,12 @@ const StarRating = ({
   messages = [],
   onSetRating,
 }) => {
+  const txtSizeVariants = {
+    sm: "text-[12px]",
+    md: "text-[16px]",
+    lg: "text-[18px]",
+  };
+
   const txtVariants = {
     green: "text-green-500",
     red: "text-red-500",
@@ -59,7 +65,7 @@ const StarRating = ({
           />
         ))}
       </div>
-      <p className={`${txtVariants[textColor]} text-${textSize}`}>
+      <p className={`${txtVariants[textColor]} ${txtSizeVariants[textSize]}`}>
         {messages.length === maxRating
           ? messages[tempRating ? tempRating - 1 : rating - 1]
           : tempRating || rating || ""}

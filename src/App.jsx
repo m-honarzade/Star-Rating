@@ -9,6 +9,7 @@ function App() {
         textColor={"gold"}
         starColor={"gold"}
         starLineColor={"gold"}
+        textSize={"md"}
       />
       <StarRating
         messages={["terrible", "bad", "ok", "good", "super"]}
